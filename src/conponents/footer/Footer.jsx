@@ -1,5 +1,6 @@
 import Image from "next/image"
 import styles from "./footer.module.css"
+import Link from "next/link"
 
 export default function Footer() {
   return (
@@ -9,12 +10,44 @@ export default function Footer() {
         <Image src="/logo.png" alt="" width={50} height={50}/>
           <h1 className={styles.logoText}>Dotnet World</h1>
         </div>
-        <p className={styles.logo}>
-
+        <p className={styles.desc}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eligendi facilis, voluptate cumque molestias, provident, praesentium nisi odit aspernatur minima quae maiores? Inventore, facere nam dolor fuga delectus blanditiis cumque.
         </p>
+        <div className={styles.icons}>
+          <Image src="/facebook.png" alt="" width={18} height={18} />
+          <Image src="/instagram.png" alt="" width={18} height={18} />
+          <Image src="/tiktok.png" alt="" width={18} height={18} />
+          <Image src="/youtube.png" alt="" width={18} height={18} />
+        </div>
       </div>
       <div className={styles.links}>
-
+      <div className={styles.list}>
+          <span className={styles.listTitle}>
+            Links
+          </span>
+          <Link href="/">Home</Link>
+          <Link href="/">Blog</Link>
+          <Link href="/">About</Link>
+          <Link href="/">Contact</Link>
+        </div>
+      <div className={styles.list}>
+          <span className={styles.listTitle}>
+            Tags
+          </span>
+          <Link href="/">Style</Link>
+          <Link href="/">Fasion</Link>
+          <Link href="/">Coding</Link>
+          <Link href="/">Travel</Link>
+        </div>
+      <div className={styles.list}>
+          <span className={styles.listTitle}>
+            Social
+          </span>
+          <Link href="/">Facebook</Link>
+          <Link href="/">Instagram</Link>
+          <Link href="/">Ticktok</Link>
+          <Link href="/">Youtube</Link>
+        </div>
       </div>
     </div>
   )
